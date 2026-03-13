@@ -1,0 +1,90 @@
+{
+  "turn_idx": 0,
+  "dice": 5,
+  "tokens": {
+    "red_1": {
+      "color": "red",
+      "slot": 0,
+      "pos": -1
+    },
+    "red_2": {
+      "color": "red",
+      "slot": 1,
+      "pos": -1
+    },
+    "red_3": {
+      "color": "red",
+      "slot": 2,
+      "pos": -1
+    },
+    "red_4": {
+      "color": "red",
+      "slot": 3,
+      "pos": -1
+    },
+    "blue_1": {
+      "color": "blue",
+      "slot": 0,
+      "pos": -1
+    },
+    "blue_2": {
+      "color": "blue",
+      "slot": 1,
+      "pos": -1
+    },
+    "blue_3": {
+      "color": "blue",
+      "slot": 2,
+      "pos": -1
+    },
+    "blue_4": {
+      "color": "blue",
+      "slot": 3,
+      "pos": -1
+    },
+    "green_1": {
+      "color": "green",
+      "slot": 0,
+      "pos": -1
+    },
+    "green_2": {
+      "color": "green",
+      "slot": 1,
+      "pos": -1
+    },
+    "green_3": {
+      "color": "green",
+      "slot": 2,
+      "pos": -1
+    },
+    "green_4": {
+      "color": "green",
+      "slot": 3,
+      "pos": -1
+    },
+    "yellow_1": {
+      "color": "yellow",
+      "slot": 0,
+      "pos": -1
+    },
+    "yellow_2": {
+      "color": "yellow",
+      "slot": 1,
+      "pos": -1
+    },
+    "yellow_3": {
+      "color": "yellow",
+      "slot": 2,
+      "pos": -1
+    },
+    "yellow_4": {
+      "color": "yellow",
+      "slot": 3,
+      "pos": -1
+    }
+  },
+  "last_moves": [],
+  "leaderboard": {},
+  "game_over": false,
+  "winner": null
+}
