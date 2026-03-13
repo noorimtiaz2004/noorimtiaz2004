@@ -1,28 +1,30 @@
 # 🎲 My Open Ludo Tournament
 
 An open 4-player Ludo tournament where **ANYONE** can play!
-It's <!-- BEGIN TURN -->Red<!-- END TURN -->'s turn — roll was <!-- BEGIN DICE ROLL -->6<!-- END DICE ROLL -->.
+It's <!-- BEGIN TURN -->
+Red
+<!-- END TURN -->'s turn — roll was <!-- BEGIN DICE ROLL -->
+5
+<!-- END DICE ROLL -->.
 
 <!-- BEGIN LUDO BOARD -->
 ![Ludo Board](board.svg)
 <!-- END LUDO BOARD -->
 
 <!-- BEGIN TOKEN STATUS -->
-### Token Positions
-
-| Token | R1 | R2 | R3 | R4 | B1 | B2 | B3 | B4 | Y1 | Y2 | Y3 | Y4 | G1 | G2 | G3 | G4 |
+| Token | red_1 | red_2 | red_3 | red_4 | blue_1 | blue_2 | blue_3 | blue_4 | green_1 | green_2 | green_3 | green_4 | yellow_1 | yellow_2 | yellow_3 | yellow_4 |
 |:-----:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| Position | 🏠 | 🏠 | 🏠 | 🏠 | 🏠 | 🏠 | 🏠 | 🏠 | 🏠 | 🏠 | 🏠 | 🏠 | 🏠 | 🏠 | 🏠 | 🏠 |
+| Position |0|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|
 <!-- END TOKEN STATUS -->
 
 **Click a link below to move your token!**
 <!-- BEGIN MOVES LIST -->
 | Token | Move |
 |:-----:|:-----|
-| **R1** | [Move R1 out of home (rolled a 6!)](https://github.com/YOUR_USERNAME/YOUR_USERNAME/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+R1) |
-| **R2** | [Move R2 out of home (rolled a 6!)](https://github.com/YOUR_USERNAME/YOUR_USERNAME/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+R2) |
-| **R3** | [Move R3 out of home (rolled a 6!)](https://github.com/YOUR_USERNAME/YOUR_USERNAME/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+R3) |
-| **R4** | [Move R4 out of home (rolled a 6!)](https://github.com/YOUR_USERNAME/YOUR_USERNAME/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+R4) |
+| **red_1** | [Token 1 — move 5 steps](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+red_1) |
+| ~~red_2~~ | *Can't move* |
+| ~~red_3~~ | *Can't move* |
+| ~~red_4~~ | *Can't move* |
 <!-- END MOVES LIST -->
 
 > 🔴 Red → 🔵 Blue → 🟢 Green → 🟡 Yellow — turn order repeats. Roll a **6** to leave home base!
@@ -35,7 +37,7 @@ It's <!-- BEGIN TURN -->Red<!-- END TURN -->'s turn — roll was <!-- BEGIN DICE
 <!-- BEGIN LAST MOVES -->
 | Move | Author |
 |:----:|:-------|
-| *No moves yet — be the first!* | — |
+| `red_1 entered the board` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
 <!-- END LAST MOVES -->
 
 </details>
@@ -46,7 +48,7 @@ It's <!-- BEGIN TURN -->Red<!-- END TURN -->'s turn — roll was <!-- BEGIN DICE
 <!-- BEGIN TOP MOVES -->
 | Total moves | User |
 |:-----------:|:-----|
-| *No moves yet!* | — |
+| 1 | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
 <!-- END TOP MOVES -->
 
 </details>
