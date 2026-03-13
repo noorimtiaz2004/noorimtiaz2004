@@ -4,7 +4,7 @@ on:
     types: [opened]
 jobs:
   play:
-    if: startsWith(github.event.issue.title, 'Ludo: Move')
+    if: "startsWith(github.event.issue.title, 'Ludo: Move')"
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -37,7 +37,7 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: "Move applied! Thanks @${{ steps.parse.outputs.author }}! 🎲"
+              body: "Move applied! Thanks @${{ steps.parse.outputs.author }}!"
             });
             await github.rest.issues.update({
               owner: context.repo.owner,
