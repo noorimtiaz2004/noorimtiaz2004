@@ -8,54 +8,46 @@ jobs:
   play:
     if: startsWith(github.event.issue.title, 'Ludo: Move')
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
       issues: write
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
       - name: Parse move from issue title
         id: parse
         run: |
-          # Title format: "Ludo: Move red_1"
           TITLE="${{ github.event.issue.title }}"
           TOKEN=$(echo "$TITLE" | sed 's/Ludo: Move //')
           echo "token=$TOKEN" >> $GITHUB_OUTPUT
           echo "author=${{ github.event.issue.user.login }}" >> $GITHUB_OUTPUT
-
       - name: Run Ludo script
         run: |
-          python .github/scripts/ludo.py "${{ steps.parse.outputs.token }}" "${{ steps.parse.outputs.author }}"
-
+          python3 .github/scripts/ludo.py "${{ steps.parse.outputs.token }}" "${{ steps.parse.outputs.author }}"
       - name: Commit updated board
         run: |
-          git config user.name  "github-actions[bot]"
+          git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add README.md board.svg .github/ludo_state.json
-          git commit -m "🎲 Ludo: ${{ steps.parse.outputs.author }} moved ${{ steps.parse.outputs.token }}"
+          git commit -m "Ludo: ${{ steps.parse.outputs.author }} moved ${{ steps.parse.outputs.token }}"
           git push
-
       - name: Comment and close issue
         uses: actions/github-script@v7
         with:
           script: |
             await github.rest.issues.createComment({
               owner: context.repo.owner,
-              repo:  context.repo.repo,
+              repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: "✅ Move applied! Thanks for playing, @${{ steps.parse.outputs.author }}! Check the updated board in the README 🎲"
+              body: "Move applied! Thanks for playing @${{ steps.parse.outputs.author }}!"
             });
             await github.rest.issues.update({
               owner: context.repo.owner,
-              repo:  context.repo.repo,
+              repo: context.repo.repo,
               issue_number: context.issue.number,
               state: "closed"
             });
