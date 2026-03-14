@@ -3,7 +3,7 @@
 An open 4-player Ludo tournament where **ANYONE** can play!<!-- BEGIN TURN -->
 Yellow
 <!-- END TURN -->'s turn — roll was <!-- BEGIN DICE ROLL -->
-2
+1
 <!-- END DICE ROLL -->.
 
 <!-- BEGIN LUDO BOARD -->
@@ -13,14 +13,14 @@ Yellow
 <!-- BEGIN TOKEN STATUS -->
 | Token | red_1 | red_2 | red_3 | red_4 | blue_1 | blue_2 | blue_3 | blue_4 | green_1 | green_2 | green_3 | green_4 | yellow_1 | yellow_2 | yellow_3 | yellow_4 |
 |:-----:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| Position |🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|2|🏠|🏠|🏠|
+| Position |🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|4|🏠|🏠|🏠|
 <!-- END TOKEN STATUS -->
 
 **Click a link below to move your token!**
 <!-- BEGIN MOVES LIST -->
 | Token | Move |
 |:-----:|:-----|
-| **yellow_1** | [Token 1 — move 2 steps](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+yellow_1) |
+| **yellow_1** | [Token 1 — move 1 steps](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+yellow_1) |
 | ~~yellow_2~~ | *Can't move* |
 | ~~yellow_3~~ | *Can't move* |
 | ~~yellow_4~~ | *Can't move* |
@@ -37,6 +37,7 @@ Yellow
 | Move | Author |
 |:----:|:-------|
 | `yellow_1 moved 2 steps` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
+| `yellow_1 moved 2 steps` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
 | `yellow_1 entered the board` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
 <!-- END LAST MOVES -->
 
@@ -48,7 +49,7 @@ Yellow
 <!-- BEGIN TOP MOVES -->
 | Total moves | User |
 |:-----------:|:-----|
-| 2 | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
+| 3 | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
 <!-- END TOP MOVES -->
 
 </details>
