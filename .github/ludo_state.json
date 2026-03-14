@@ -1,11 +1,11 @@
 {
-  "turn_idx": 1,
+  "turn_idx": 0,
   "dice": 5,
   "tokens": {
     "red_1": {
       "color": "red",
       "slot": 0,
-      "pos": 13
+      "pos": -1
     },
     "red_2": {
       "color": "red",
@@ -25,7 +25,7 @@
     "blue_1": {
       "color": "blue",
       "slot": 0,
-      "pos": 3
+      "pos": -1
     },
     "blue_2": {
       "color": "blue",
@@ -83,31 +83,8 @@
       "pos": -1
     }
   },
-  "last_moves": [
-    {
-      "move": "red_1 moved 5 steps",
-      "author": "noorimtiaz2004"
-    },
-    {
-      "move": "blue_1 moved 3 steps",
-      "author": "noorimtiaz2004"
-    },
-    {
-      "move": "blue_1 entered the board",
-      "author": "noorimtiaz2004"
-    },
-    {
-      "move": "red_1 moved 5 steps",
-      "author": "noorimtiaz2004"
-    },
-    {
-      "move": "red_1 moved 3 steps",
-      "author": "noorimtiaz2004"
-    }
-  ],
-  "leaderboard": {
-    "noorimtiaz2004": 6
-  },
+  "last_moves": [],
+  "leaderboard": {},
   "game_over": false,
   "winner": null
 }

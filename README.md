@@ -11,17 +11,17 @@ An open 4-player Ludo tournament where **ANYONE** can play!
 <!-- BEGIN TOKEN STATUS -->
 | Token | red_1 | red_2 | red_3 | red_4 | blue_1 | blue_2 | blue_3 | blue_4 | green_1 | green_2 | green_3 | green_4 | yellow_1 | yellow_2 | yellow_3 | yellow_4 |
 |:-----:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| Position |13|🏠|🏠|🏠|3|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|
+| Position |🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|
 <!-- END TOKEN STATUS -->
 
 **Click a link below to move your token!**
 <!-- BEGIN MOVES LIST -->
 | Token | Move |
 |:-----:|:-----|
-| **blue_1** | [Token 1 — move 5 steps](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+blue_1) |
-| ~~blue_2~~ | *Can't move* |
-| ~~blue_3~~ | *Can't move* |
-| ~~blue_4~~ | *Can't move* |
+| ~~red_1~~ | *Can't move* |
+| ~~red_2~~ | *Can't move* |
+| ~~red_3~~ | *Can't move* |
+| ~~red_4~~ | *Can't move* |
 <!-- END MOVES LIST -->
 
 > 🔴 Red → 🔵 Blue → 🟢 Green → 🟡 Yellow — turn order repeats. Roll a **6** to leave home base!
@@ -32,13 +32,7 @@ An open 4-player Ludo tournament where **ANYONE** can play!
   <summary>📜 Last 5 moves</summary>
 
 <!-- BEGIN LAST MOVES -->
-| Move | Author |
-|:----:|:-------|
-| `red_1 moved 5 steps` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
-| `blue_1 moved 3 steps` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
-| `blue_1 entered the board` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
-| `red_1 moved 5 steps` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
-| `red_1 moved 3 steps` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
+| *No moves yet!* | — |
 <!-- END LAST MOVES -->
 
 </details>
@@ -47,9 +41,7 @@ An open 4-player Ludo tournament where **ANYONE** can play!
   <summary>🏆 Top 10 players</summary>
 
 <!-- BEGIN TOP MOVES -->
-| Total moves | User |
-|:-----------:|:-----|
-| 6 | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
+| *No moves yet!* | — |
 <!-- END TOP MOVES -->
 
 </details>
