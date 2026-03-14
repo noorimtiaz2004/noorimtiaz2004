@@ -2,7 +2,7 @@
 
 An open 4-player Ludo tournament where **ANYONE** can play!
 
-<!-- END DICE ROLL -->.
+<!-- END DICE ROLL -->
 
 <!-- BEGIN LUDO BOARD -->
 ![Ludo Board](board.svg)
