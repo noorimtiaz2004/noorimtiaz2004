@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 import re, sys, json, random
 from pathlib import Path
-from datetime import datetime
 
 README_PATH = "README.md"
 STATE_PATH  = ".github/ludo_state.json"
 SVG_PATH    = "board.svg"
+REPO        = "noorimtiaz2004/noorimtiaz2004"
 
 TURN_ORDER = ["red","blue","green","yellow"]
 COLORS = {"red":"#D93025","blue":"#1A73E8","yellow":"#F9AB00","green":"#1E8E3E"}
@@ -38,15 +38,22 @@ SAFE_IDX = {0,8,13,21,26,34,39,47}
 FINISH = 100
 
 def roll_dice():
-    return random.randint(1,6)
+    return random.randint(1, 6)
 
 def default_state():
     tokens = {}
     for color in TURN_ORDER:
-        for i in range(1,5):
-            tokens[f"{color}_{i}"] = {"color":color,"slot":i-1,"pos":-1}
-    return {"turn_idx":0,"dice":roll_dice(),"tokens":tokens,
-            "last_moves":[],"leaderboard":{},"game_over":False,"winner":None}
+        for i in range(1, 5):
+            tokens[f"{color}_{i}"] = {"color": color, "slot": i-1, "pos": -1}
+    return {
+        "turn_idx": 0,
+        "dice": roll_dice(),
+        "tokens": tokens,
+        "last_moves": [],
+        "leaderboard": {},
+        "game_over": False,
+        "winner": None,
+    }
 
 def load_state():
     p = Path(STATE_PATH)
@@ -78,27 +85,24 @@ def get_valid_moves(state):
         if t["color"] != color or t["pos"] == FINISH: continue
         if t["pos"] == -1 and dice == 6:
             valid.append(tid)
-        elif t["pos"] >= 0 and t["pos"]+dice <= len(PATH)+len(HOME_COL[color])-1:
+        elif t["pos"] >= 0 and t["pos"] + dice <= len(PATH) + len(HOME_COL[color]) - 1:
             valid.append(tid)
     return valid
 
+def all_finished(state, color):
+    return all(state["tokens"][f"{color}_{i}"]["pos"] == FINISH for i in range(1, 5))
+
 def advance_turn(state):
-    """Move to next player, only skipping players who have fully finished."""
-    state["turn_idx"] = (state["turn_idx"] + 1) % 4
-    state["dice"] = roll_dice()
-    # Only skip players who have ALL 4 tokens at finish
-    attempts = 0
-    while attempts < 4:
-        color = current_color(state)
-        if not all(state["tokens"][f"{color}_{i}"]["pos"] == FINISH for i in range(1,5)):
-            return  # This player still has tokens to move, it's their turn
+    """Advance to the next player who still has tokens to play."""
+    for _ in range(4):
         state["turn_idx"] = (state["turn_idx"] + 1) % 4
         state["dice"] = roll_dice()
-        attempts += 1
+        if not all_finished(state, current_color(state)):
+            return
 
 def apply_move(state, tid, author):
-    t    = state["tokens"][tid]
-    dice = state["dice"]
+    t     = state["tokens"][tid]
+    dice  = state["dice"]
     color = t["color"]
 
     if t["pos"] == -1:
@@ -106,52 +110,50 @@ def apply_move(state, tid, author):
         desc = f"{tid} entered the board"
     else:
         t["pos"] += dice
-        if t["pos"] >= len(PATH) + len(HOME_COL[color]) - 1:
+        max_pos = len(PATH) + len(HOME_COL[color]) - 1
+        if t["pos"] >= max_pos:
             t["pos"] = FINISH
             desc = f"{tid} reached the finish!"
         else:
             desc = f"{tid} moved {dice} steps"
 
-    # Capture
     if 0 < t["pos"] < len(PATH):
         pi = (START_IDX[color] + t["pos"]) % len(PATH)
         if pi not in SAFE_IDX:
             my_rc = token_coord(state, tid)
             for oid, ot in state["tokens"].items():
-                if ot["color"]==color or ot["pos"]<=0 or ot["pos"]==FINISH or ot["pos"]>=len(PATH): continue
+                if ot["color"] == color or ot["pos"] <= 0 or ot["pos"] == FINISH or ot["pos"] >= len(PATH): continue
                 if token_coord(state, oid) == my_rc:
                     ot["pos"] = -1
                     desc += f", sent {oid} home"
 
-    state["last_moves"].insert(0, {"move":desc,"author":author})
+    state["last_moves"].insert(0, {"move": desc, "author": author})
     state["last_moves"] = state["last_moves"][:5]
-    state["leaderboard"][author] = state["leaderboard"].get(author,0) + 1
+    state["leaderboard"][author] = state["leaderboard"].get(author, 0) + 1
 
-    # Win check
-    if all(state["tokens"][f"{color}_{i}"]["pos"] == FINISH for i in range(1,5)):
+    if all_finished(state, color):
         state["game_over"] = True
         state["winner"] = color
         return desc
 
-    # Rolled 6 = take another turn (keep turn_idx, just re-roll)
     if dice == 6:
         state["dice"] = roll_dice()
-        # If no valid moves even with new roll, advance anyway
-        if not get_valid_moves(state):
-            advance_turn(state)
     else:
         advance_turn(state)
 
     return desc
 
 def render_svg(state):
-    S=600; N=15; C=S/N
+    S = 600; N = 15; C = S / N
     def rect(x,y,w,h,fill,stroke="#333",sw=0.7):
         return f'<rect x="{x:.1f}" y="{y:.1f}" width="{w:.1f}" height="{h:.1f}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>'
     def txt(x,y,s,size,fill,weight="normal"):
         return f'<text x="{x:.1f}" y="{y:.1f}" font-size="{size}" fill="{fill}" font-weight="{weight}" text-anchor="middle" dominant-baseline="central" font-family="sans-serif">{s}</text>'
     def rrp(x,y,w,h,r):
-        return f"M{x+r},{y} L{x+w-r},{y} Q{x+w},{y} {x+w},{y+r} L{x+w},{y+h-r} Q{x+w},{y+h} {x+w-r},{y+h} L{x+r},{y+h} Q{x},{y+h} {x},{y+h-r} L{x},{y+r} Q{x},{y} {x+r},{y} Z"
+        return (f"M{x+r},{y} L{x+w-r},{y} Q{x+w},{y} {x+w},{y+r} "
+                f"L{x+w},{y+h-r} Q{x+w},{y+h} {x+w-r},{y+h} "
+                f"L{x+r},{y+h} Q{x},{y+h} {x},{y+h-r} "
+                f"L{x},{y+r} Q{x},{y} {x+r},{y} Z")
     p = [f'<svg width="{S}" height="{S}" viewBox="0 0 {S} {S}" xmlns="http://www.w3.org/2000/svg">']
     p.append(f'<rect width="{S}" height="{S}" fill="#fff"/>')
     for color,br,bc in [("blue",0,0),("green",0,9),("yellow",9,0),("red",9,9)]:
@@ -172,10 +174,12 @@ def render_svg(state):
     p.append(rect(13*C,8*C,C,C,LIGHT["green"]))
     p.append(rect(6*C,12*C,C,C,LIGHT["red"]))
     cx,cy,cs=6*C,6*C,3*C
-    for fill,pts in [(COLORS["blue"],[(cx+cs/2,cy+cs/2),(cx,cy),(cx+cs,cy)]),
-                     (COLORS["green"],[(cx+cs/2,cy+cs/2),(cx+cs,cy),(cx+cs,cy+cs)]),
-                     (COLORS["red"],[(cx+cs/2,cy+cs/2),(cx+cs,cy+cs),(cx,cy+cs)]),
-                     (COLORS["yellow"],[(cx+cs/2,cy+cs/2),(cx,cy+cs),(cx,cy)])]:
+    for fill,pts in [
+        (COLORS["blue"],  [(cx+cs/2,cy+cs/2),(cx,cy),(cx+cs,cy)]),
+        (COLORS["green"], [(cx+cs/2,cy+cs/2),(cx+cs,cy),(cx+cs,cy+cs)]),
+        (COLORS["red"],   [(cx+cs/2,cy+cs/2),(cx+cs,cy+cs),(cx,cy+cs)]),
+        (COLORS["yellow"],[(cx+cs/2,cy+cs/2),(cx,cy+cs),(cx,cy)]),
+    ]:
         ps=" ".join(f"{px:.1f},{py:.1f}" for px,py in pts)
         p.append(f'<polygon points="{ps}" fill="{fill}"/>')
     p.append(f'<rect x="{cx}" y="{cy}" width="{cs}" height="{cs}" fill="none" stroke="#333" stroke-width="1"/>')
@@ -213,10 +217,15 @@ def replace_section(content,begin_tag,end_tag,new_content):
     return re.sub(pattern,rf"\1\n{new_content}\n\2",content,flags=re.DOTALL)
 
 def render_moves_list(state):
-    if state["game_over"]: return f"| — | {state['winner'].capitalize()} wins! |"
+    if state["game_over"]:
+        return f"| — | 🏆 {state['winner'].capitalize()} wins the game! |"
     valid=get_valid_moves(state); color=current_color(state); dice=state["dice"]
-    base="https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new"
+    base=f"https://github.com/{REPO}/issues/new"
     body="body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22."
+    if not valid:
+        title=f"Ludo%3A+Pass+{color}"
+        return (f"| **{color.capitalize()} rolled {dice} — no valid moves** |"
+                f" [👉 Click to pass your turn]({base}?{body}&title={title}) |")
     lines=["| Token | Move |","|:-----:|:-----|"]
     for tid in [f"{color}_{i}" for i in range(1,5)]:
         t=state["tokens"][tid]
@@ -270,16 +279,24 @@ def main():
     state=load_state()
     if state["game_over"]: print("Game over!"); sys.exit(0)
     color=current_color(state)
+
+    if tid.startswith("pass"):
+        print(f"Passing turn for {color}")
+        advance_turn(state)
+        save_state(state)
+        Path(SVG_PATH).write_text(render_svg(state),encoding="utf-8")
+        update_readme(state)
+        print(f"Passed. Next: {current_color(state)}, dice: {state['dice']}")
+        return
+
     if not tid.startswith(color): print(f"Error: It's {color}'s turn."); sys.exit(1)
-    if tid not in get_valid_moves(state):
-        print(f"Error: {tid} cannot move (dice={state['dice']}).")
-        sys.exit(1)
+    if tid not in get_valid_moves(state): print(f"Error: {tid} cannot move (dice={state['dice']})."); sys.exit(1)
     desc=apply_move(state,tid,author)
     print(f"Move: {desc}")
     save_state(state)
     Path(SVG_PATH).write_text(render_svg(state),encoding="utf-8")
     update_readme(state)
-    print(f"Done. Next turn: {current_color(state)}, dice: {state['dice']}")
+    print(f"Done. Next: {current_color(state)}, dice: {state['dice']}")
 
 if __name__=="__main__":
     main()
