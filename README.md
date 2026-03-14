@@ -3,7 +3,7 @@
 An open 4-player Ludo tournament where **ANYONE** can play!<!-- BEGIN TURN -->
 Blue
 <!-- END TURN -->'s turn — roll was <!-- BEGIN DICE ROLL -->
-5
+
 <!-- END DICE ROLL -->.
 
 <!-- BEGIN LUDO BOARD -->
