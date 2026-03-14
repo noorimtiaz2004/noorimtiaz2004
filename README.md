@@ -16,7 +16,12 @@ An open 4-player Ludo tournament where **ANYONE** can play!
 
 **Click a link below to move your token!**
 <!-- BEGIN MOVES LIST -->
-| **Yellow rolled 3 — no valid moves** | [👉 Click to pass your turn](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Pass+yellow) |
+| Token | Move |
+|:-----:|:-----|
+| ~~red_1~~ | *Can't move* |
+| **red_2** | [Token 2 — move 1 steps](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+red_2) |
+| ~~red_3~~ | *Can't move* |
+| ~~red_4~~ | *Can't move* |
 <!-- END MOVES LIST -->
 
 > 🔴 Red → 🔵 Blue → 🟢 Green → 🟡 Yellow — turn order repeats. Roll a **6** to leave home base!
