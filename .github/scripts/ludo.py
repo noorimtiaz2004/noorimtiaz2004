@@ -83,19 +83,18 @@ def get_valid_moves(state):
     return valid
 
 def advance_turn(state):
-    """Move to next player and keep skipping players with no valid moves."""
-    for _ in range(4):
+    """Move to next player, only skipping players who have fully finished."""
+    state["turn_idx"] = (state["turn_idx"] + 1) % 4
+    state["dice"] = roll_dice()
+    # Only skip players who have ALL 4 tokens at finish
+    attempts = 0
+    while attempts < 4:
+        color = current_color(state)
+        if not all(state["tokens"][f"{color}_{i}"]["pos"] == FINISH for i in range(1,5)):
+            return  # This player still has tokens to move, it's their turn
         state["turn_idx"] = (state["turn_idx"] + 1) % 4
         state["dice"] = roll_dice()
-        # Skip players who have all tokens finished
-        color = current_color(state)
-        if all(state["tokens"][f"{color}_{i}"]["pos"] == FINISH for i in range(1,5)):
-            continue
-        # If this player has valid moves, stop here
-        if get_valid_moves(state):
-            return
-        # No valid moves - keep skipping
-        print(f"No moves for {color} (rolled {state['dice']}), skipping...")
+        attempts += 1
 
 def apply_move(state, tid, author):
     t    = state["tokens"][tid]
