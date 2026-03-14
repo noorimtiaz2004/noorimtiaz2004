@@ -271,7 +271,9 @@ def main():
     if state["game_over"]: print("Game over!"); sys.exit(0)
     color=current_color(state)
     if not tid.startswith(color): print(f"Error: It's {color}'s turn."); sys.exit(1)
-    if tid not in get_valid_moves(state): print(f"Error: {tid} cannot move (dice={state['dice']})."); sys.exit(1)
+    if tid not in get_valid_moves(state):
+        print(f"Error: {tid} cannot move (dice={state['dice']}).")
+        sys.exit(1)
     desc=apply_move(state,tid,author)
     print(f"Move: {desc}")
     save_state(state)
