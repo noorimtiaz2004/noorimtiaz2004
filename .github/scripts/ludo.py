@@ -280,7 +280,7 @@ def main():
     if state["game_over"]: print("Game over!"); sys.exit(0)
     color=current_color(state)
 
-    if tid.startswith("pass"):
+    if tid.startswith("pass")or tid == f"pass_{color}":
         print(f"Passing turn for {color}")
         advance_turn(state)
         save_state(state)
