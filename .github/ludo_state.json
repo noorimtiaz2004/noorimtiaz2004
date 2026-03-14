@@ -1,6 +1,6 @@
 {
-  "turn_idx": 3,
-  "dice": 1,
+  "turn_idx": 0,
+  "dice": 5,
   "tokens": {
     "red_1": {
       "color": "red",
