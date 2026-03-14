@@ -1,9 +1,9 @@
 # 🎲 My Open Ludo Tournament
 
 An open 4-player Ludo tournament where **ANYONE** can play!<!-- BEGIN TURN -->
-Red
+Yellow
 <!-- END TURN -->'s turn — roll was <!-- BEGIN DICE ROLL -->
-5
+6
 <!-- END DICE ROLL -->.
 
 <!-- BEGIN LUDO BOARD -->
@@ -13,17 +13,17 @@ Red
 <!-- BEGIN TOKEN STATUS -->
 | Token | red_1 | red_2 | red_3 | red_4 | blue_1 | blue_2 | blue_3 | blue_4 | green_1 | green_2 | green_3 | green_4 | yellow_1 | yellow_2 | yellow_3 | yellow_4 |
 |:-----:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| Position |5|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|
+| Position |🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|🏠|
 <!-- END TOKEN STATUS -->
 
 **Click a link below to move your token!**
 <!-- BEGIN MOVES LIST -->
 | Token | Move |
 |:-----:|:-----|
-| **red_1** | [Token 1 — move 5 steps](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+red_1) |
-| ~~red_2~~ | *Can't move* |
-| ~~red_3~~ | *Can't move* |
-| ~~red_4~~ | *Can't move* |
+| **yellow_1** | [Token 1 — exit home (rolled 6!)](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+yellow_1) |
+| **yellow_2** | [Token 2 — exit home (rolled 6!)](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+yellow_2) |
+| **yellow_3** | [Token 3 — exit home (rolled 6!)](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+yellow_3) |
+| **yellow_4** | [Token 4 — exit home (rolled 6!)](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+yellow_4) |
 <!-- END MOVES LIST -->
 
 > 🔴 Red → 🔵 Blue → 🟢 Green → 🟡 Yellow — turn order repeats. Roll a **6** to leave home base!
@@ -34,10 +34,7 @@ Red
   <summary>📜 Last 5 moves</summary>
 
 <!-- BEGIN LAST MOVES -->
-| Move | Author |
-|:----:|:-------|
-| `red_1 moved 5 steps` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
-| `red_1 entered the board` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
+| *No moves yet!* | — |
 <!-- END LAST MOVES -->
 
 </details>
@@ -46,9 +43,7 @@ Red
   <summary>🏆 Top 10 players</summary>
 
 <!-- BEGIN TOP MOVES -->
-| Total moves | User |
-|:-----------:|:-----|
-| 2 | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
+| *No moves yet!* | — |
 <!-- END TOP MOVES -->
 
 </details>

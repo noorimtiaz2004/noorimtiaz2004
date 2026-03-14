@@ -1,11 +1,11 @@
 {
-  "turn_idx": 0,
-  "dice": 5,
+  "turn_idx": 3,
+  "dice": 6,
   "tokens": {
     "red_1": {
       "color": "red",
       "slot": 0,
-      "pos": 5
+      "pos": -1
     },
     "red_2": {
       "color": "red",
@@ -83,19 +83,8 @@
       "pos": -1
     }
   },
-  "last_moves": [
-    {
-      "move": "red_1 moved 5 steps",
-      "author": "noorimtiaz2004"
-    },
-    {
-      "move": "red_1 entered the board",
-      "author": "noorimtiaz2004"
-    }
-  ],
-  "leaderboard": {
-    "noorimtiaz2004": 2
-  },
+  "last_moves": [],
+  "leaderboard": {},
   "game_over": false,
   "winner": null
 }
