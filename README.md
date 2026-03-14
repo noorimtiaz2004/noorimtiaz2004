@@ -18,10 +18,10 @@ An open 4-player Ludo tournament where **ANYONE** can play!
 <!-- BEGIN MOVES LIST -->
 | Token | Move |
 |:-----:|:-----|
-| ~~red_1~~ | *Can't move* |
-| ~~red_2~~ | *Can't move* |
-| ~~red_3~~ | *Can't move* |
-| ~~red_4~~ | *Can't move* |
+| ~~blue_1~~ | *Can't move* |
+| ~~blue_2~~ | *Can't move* |
+| ~~blue_3~~ | *Can't move* |
+| ~~blue_4~~ | *Can't move* |
 <!-- END MOVES LIST -->
 
 > 🔴 Red → 🔵 Blue → 🟢 Green → 🟡 Yellow — turn order repeats. Roll a **6** to leave home base!
