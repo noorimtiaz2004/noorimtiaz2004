@@ -255,12 +255,7 @@ def main():
     update_readme(state)
     print("Done.")
 
-if __name__=="__main__":
-    main()
-
-
 def auto_advance(state):
-    """Skip turns where the current player has no valid moves."""
     attempts = 0
     while attempts < 4:
         if get_valid_moves(state):
@@ -269,4 +264,8 @@ def auto_advance(state):
         state["turn_idx"] = (state["turn_idx"] + 1) % 4
         state["dice"] = roll_dice()
         attempts += 1
-    return state
+
+if __name__=="__main__":
+    main()
+
+
