@@ -1,6 +1,6 @@
 {
   "turn_idx": 3,
-  "dice": 6,
+  "dice": 2,
   "tokens": {
     "red_1": {
       "color": "red",
@@ -65,7 +65,7 @@
     "yellow_1": {
       "color": "yellow",
       "slot": 0,
-      "pos": -1
+      "pos": 0
     },
     "yellow_2": {
       "color": "yellow",
@@ -83,8 +83,15 @@
       "pos": -1
     }
   },
-  "last_moves": [],
-  "leaderboard": {},
+  "last_moves": [
+    {
+      "move": "yellow_1 entered the board",
+      "author": "noorimtiaz2004"
+    }
+  ],
+  "leaderboard": {
+    "noorimtiaz2004": 1
+  },
   "game_over": false,
   "winner": null
 }
