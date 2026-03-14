@@ -1,8 +1,6 @@
 # 🎲 My Open Ludo Tournament
 
-An open 4-player Ludo tournament where **ANYONE** can play!<!-- BEGIN TURN -->
-Blue
-<!-- END TURN -->'s turn — roll was <!-- BEGIN DICE ROLL -->
+An open 4-player Ludo tournament where **ANYONE** can play!
 
 <!-- END DICE ROLL -->.
 
