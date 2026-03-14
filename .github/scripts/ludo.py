@@ -115,6 +115,10 @@ def apply_move(state, tid, author):
             nc = current_color(state)
             if not all(state["tokens"][f"{nc}_{i}"]["pos"]==FINISH for i in range(1,5)): break
             state["turn_idx"]=(state["turn_idx"]+1)%4; attempts+=1
+        for _ in range(4):
+            if get_valid_moves(state): break
+            state["turn_idx"] = (state["turn_idx"]+1)%4
+            state["dice"] = roll_dice()
     state["dice"] = roll_dice(int(datetime.now().timestamp()*1000)%999983)
     return desc
 
@@ -249,21 +253,10 @@ def main():
     if tid not in valid: print(f"Error: {tid} cannot move (dice={state['dice']})."); sys.exit(1)
     desc=apply_move(state,tid,author)
     print(f"Move: {desc}")
-    auto_advance(state)
     save_state(state)
     Path(SVG_PATH).write_text(render_svg(state),encoding="utf-8")
     update_readme(state)
     print("Done.")
-
-def auto_advance(state):
-    attempts = 0
-    while attempts < 4:
-        if get_valid_moves(state):
-            break
-        print(f"No moves for {current_color(state)}, skipping...")
-        state["turn_idx"] = (state["turn_idx"] + 1) % 4
-        state["dice"] = roll_dice()
-        attempts += 1
 
 if __name__=="__main__":
     main()
