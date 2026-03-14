@@ -249,6 +249,7 @@ def main():
     if tid not in valid: print(f"Error: {tid} cannot move (dice={state['dice']})."); sys.exit(1)
     desc=apply_move(state,tid,author)
     print(f"Move: {desc}")
+    auto_advance(state)
     save_state(state)
     Path(SVG_PATH).write_text(render_svg(state),encoding="utf-8")
     update_readme(state)
@@ -256,3 +257,16 @@ def main():
 
 if __name__=="__main__":
     main()
+
+
+def auto_advance(state):
+    """Skip turns where the current player has no valid moves."""
+    attempts = 0
+    while attempts < 4:
+        if get_valid_moves(state):
+            break
+        print(f"No moves for {current_color(state)}, skipping...")
+        state["turn_idx"] = (state["turn_idx"] + 1) % 4
+        state["dice"] = roll_dice()
+        attempts += 1
+    return state

@@ -1,9 +1,9 @@
 # 🎲 My Open Ludo Tournament
 
 An open 4-player Ludo tournament where **ANYONE** can play!<!-- BEGIN TURN -->
-Blue
+Red
 <!-- END TURN -->'s turn — roll was <!-- BEGIN DICE ROLL -->
-1
+5
 <!-- END DICE ROLL -->.
 
 <!-- BEGIN LUDO BOARD -->
@@ -20,10 +20,10 @@ Blue
 <!-- BEGIN MOVES LIST -->
 | Token | Move |
 |:-----:|:-----|
-| ~~blue_1~~ | *Can't move* |
-| ~~blue_2~~ | *Can't move* |
-| ~~blue_3~~ | *Can't move* |
-| ~~blue_4~~ | *Can't move* |
+| **red_1** | [Token 1 — move 5 steps](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+red_1) |
+| ~~red_2~~ | *Can't move* |
+| ~~red_3~~ | *Can't move* |
+| ~~red_4~~ | *Can't move* |
 <!-- END MOVES LIST -->
 
 > 🔴 Red → 🔵 Blue → 🟢 Green → 🟡 Yellow — turn order repeats. Roll a **6** to leave home base!
