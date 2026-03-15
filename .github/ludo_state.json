@@ -1,5 +1,5 @@
 {
-  "turn_idx": 0,
+  "turn_idx": 1,
   "dice": 5,
   "tokens": {
     "red_1": {
@@ -20,7 +20,7 @@
     "red_4": {
       "color": "red",
       "slot": 3,
-      "pos": 0
+      "pos": 5
     },
     "blue_1": {
       "color": "blue",
@@ -85,6 +85,10 @@
   },
   "last_moves": [
     {
+      "move": "red_4 moved 5 steps",
+      "author": "noorimtiaz2004"
+    },
+    {
       "move": "yellow_1 moved 5 steps",
       "author": "noorimtiaz2004"
     },
@@ -99,15 +103,11 @@
     {
       "move": "blue_1 entered the board",
       "author": "noorimtiaz2004"
-    },
-    {
-      "move": "red_3 moved 4 steps",
-      "author": "noorimtiaz2004"
     }
   ],
   "leaderboard": {
     "jayvinso": 2,
-    "noorimtiaz2004": 76
+    "noorimtiaz2004": 77
   },
   "game_over": false,
   "winner": null
