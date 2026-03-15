@@ -1,6 +1,6 @@
 {
-  "turn_idx": 3,
-  "dice": 3,
+  "turn_idx": 0,
+  "dice": 4,
   "tokens": {
     "red_1": {
       "color": "red",
@@ -65,7 +65,7 @@
     "yellow_1": {
       "color": "yellow",
       "slot": 0,
-      "pos": 22
+      "pos": 25
     },
     "yellow_2": {
       "color": "yellow",
@@ -85,6 +85,10 @@
   },
   "last_moves": [
     {
+      "move": "yellow_1 moved 3 steps",
+      "author": "noorimtiaz2004"
+    },
+    {
       "move": "green_2 moved 2 steps",
       "author": "noorimtiaz2004"
     },
@@ -99,15 +103,11 @@
     {
       "move": "yellow_1 moved 4 steps",
       "author": "noorimtiaz2004"
-    },
-    {
-      "move": "green_2 moved 5 steps",
-      "author": "noorimtiaz2004"
     }
   ],
   "leaderboard": {
     "jayvinso": 2,
-    "noorimtiaz2004": 70
+    "noorimtiaz2004": 71
   },
   "game_over": false,
   "winner": null
