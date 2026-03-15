@@ -11,17 +11,17 @@ An open 4-player Ludo tournament where **ANYONE** can play!
 <!-- BEGIN TOKEN STATUS -->
 | Token | red_1 | red_2 | red_3 | red_4 | blue_1 | blue_2 | blue_3 | blue_4 | green_1 | green_2 | green_3 | green_4 | yellow_1 | yellow_2 | yellow_3 | yellow_4 |
 |:-----:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| Position |0|44|0|🏠|🏠|13|4|🏠|22|4|🏠|🏠|16|31|0|🏠|
+| Position |2|44|0|🏠|🏠|13|4|🏠|22|4|🏠|🏠|16|31|0|🏠|
 <!-- END TOKEN STATUS -->
 
 **Click a link below to move your token!**
 <!-- BEGIN MOVES LIST -->
 | Token | Move |
 |:-----:|:-----|
-| **red_1** | [Token 1 — move 2 steps](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+red_1) |
-| **red_2** | [Token 2 — move 2 steps](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+red_2) |
-| **red_3** | [Token 3 — move 2 steps](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+red_3) |
-| ~~red_4~~ | *Can't move* |
+| ~~blue_1~~ | *Can't move* |
+| **blue_2** | [Token 2 — move 4 steps](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+blue_2) |
+| **blue_3** | [Token 3 — move 4 steps](https://github.com/noorimtiaz2004/noorimtiaz2004/issues/new?body=Please+do+not+change+the+title.+Just+click+%22Submit+new+issue%22.&title=Ludo%3A+Move+blue_3) |
+| ~~blue_4~~ | *Can't move* |
 <!-- END MOVES LIST -->
 
 > 🔴 Red → 🔵 Blue → 🟢 Green → 🟡 Yellow — turn order repeats. Roll a **6** to leave home base!
@@ -34,11 +34,11 @@ An open 4-player Ludo tournament where **ANYONE** can play!
 <!-- BEGIN LAST MOVES -->
 | Move | Author |
 |:----:|:-------|
+| `red_1 moved 2 steps` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
 | `red_3 entered the board` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
 | `red_1 entered the board` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
 | `yellow_2 moved 2 steps` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
 | `yellow_2 moved 6 steps` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
-| `green_1 moved 5 steps` | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
 <!-- END LAST MOVES -->
 
 </details>
@@ -49,7 +49,7 @@ An open 4-player Ludo tournament where **ANYONE** can play!
 <!-- BEGIN TOP MOVES -->
 | Total moves | User |
 |:-----------:|:-----|
-| 54 | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
+| 55 | [@noorimtiaz2004](https://github.com/noorimtiaz2004) |
 | 2 | [@jayvinso](https://github.com/jayvinso) |
 <!-- END TOP MOVES -->
 
