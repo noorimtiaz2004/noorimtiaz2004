@@ -80,10 +80,14 @@
     "yellow_4": {
       "color": "yellow",
       "slot": 3,
-      "pos": -1
+      "pos": 0
     }
   },
   "last_moves": [
+    {
+      "move": "yellow_4 entered the board",
+      "author": "noorimtiaz2004"
+    },
     {
       "move": "green_1 moved 4 steps",
       "author": "noorimtiaz2004"
@@ -99,15 +103,11 @@
     {
       "move": "yellow_1 moved 5 steps",
       "author": "noorimtiaz2004"
-    },
-    {
-      "move": "green_1 moved 1 steps",
-      "author": "noorimtiaz2004"
     }
   ],
   "leaderboard": {
     "jayvinso": 2,
-    "noorimtiaz2004": 79
+    "noorimtiaz2004": 80
   },
   "game_over": false,
   "winner": null
